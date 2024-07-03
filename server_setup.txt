@@ -1,0 +1,40 @@
+// setting up the server
+
+Initial Server Setup with Ubuntu
+1. Logging in as root
+2. Creating a New User
+3. Granting Administrative Privileges
+4. Setting Up a Firewall
+5. Enabling External Access for Your Regular User
+
+
+LINKS:
+	1: Server setup :: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu
+	2: setting up firewall :: https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands#verify-ufw-status
+	
+	
+	
+step 1:
+	You need the server's public IP address to login in to the server and the password for the server too. 
+	
+	> login to the server/root user
+		ssh root@<server_ip>
+	> Create a new user
+		adduser <username>
+	> Granting the administrative access to the user
+		usermod -aG sudo <username>
+	> Setting up firewall
+		ufw app list		//list all installed uft profile
+		ufw allow OpenSSH	//allow ssh connection 
+		ufw enable		//enable firewall
+		ufw status		//display the status of utf
+	Note:
+		# Before enabling the firewall allow openssh connection
+		# Allow NGINX HTTP/HTTPS
+			sudo uft app list | grep Nginx
+			sudo uft allow "Nginx Full"
+	> Enabling External Access for Your Regular User
+		
+	
+		
+		
