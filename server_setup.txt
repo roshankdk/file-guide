@@ -1,4 +1,4 @@
-// setting up the server
+// setting up the Ubunut server
 
 Initial Server Setup with Ubuntu
 1. Logging in as root
